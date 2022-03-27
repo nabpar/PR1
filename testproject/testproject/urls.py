@@ -20,11 +20,14 @@ from rest_framework import routers
 
 router=routers.DefaultRouter()
 router.register('view',views.ViewCURD)
+router.register('taecher',views.TeacherCURD)
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include(router.urls)),
+    path('',include(router.urls)),
+
 
 ]
